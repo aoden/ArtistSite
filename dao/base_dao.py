@@ -13,4 +13,3 @@ class BaseDao:
         return self.connection
 
 
-BaseDao().get_connection()

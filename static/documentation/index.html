@@ -1,0 +1,963 @@
+<!doctype html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <title>Aperio - Creative Multi-Purpose Theme</title>
+
+    <meta name="description"
+          content="A Perfect HTML5 Template for your site with unlimited options, colors and pre built pages to make your work easier, 2 different portfolio pages, 4 different homepages and much more..">
+    <meta name="author" content="max-themes">
+    <meta name="copyright" content="max-themes">
+    <meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+    <meta name="date" content="2013-05-30T00:00:00+02:00">
+
+    <link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+    <link type="text/css" rel="stylesheet" href="assets/css/SyntaxHighlighter.css"></link>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery.scrollTo.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+
+    <script>document.createElement('section');
+    var duration = '500', easing = 'swing';</script>
+    <script src="assets/js/script.js"></script>
+
+    <style>
+        html {
+            background-color: #EEEEEE;
+            color: #383838;
+        }
+
+        ::-moz-selection {
+            background: #333636;
+            color: #00DFFC;
+        }
+
+        ::selection {
+            background: #333636;
+            color: #00DFFC;
+        }
+
+        #documenter_sidebar #documenter_logo {
+            background-image: url();
+        }
+
+        a {
+            color: #008C9E;
+        }
+
+        .btn {
+            border-radius: 3px;
+        }
+
+        .btn-primary {
+            background-image: -moz-linear-gradient(top, #008C9E, #006673);
+            background-image: -ms-linear-gradient(top, #008C9E, #006673);
+            background-image: -webkit-gradient(linear, 0 0, 0 008 C9E%, from(#343838), to(#006673));
+            background-image: -webkit-linear-gradient(top, #008C9E, #006673);
+            background-image: -o-linear-gradient(top, #008C9E, #006673);
+            background-image: linear-gradient(top, #008C9E, #006673);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008C9E', endColorstr='#006673', GradientType=0);
+            border-color: #006673 #006673 #bfbfbf;
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:active,
+        .btn-primary.active,
+        .btn-primary.disabled,
+        .btn-primary[disabled] {
+            border-color: #008C9E #008C9E #bfbfbf;
+            background-color: #006673;
+        }
+
+        hr {
+            border-top: 1px solid #D4D4D4;
+            border-bottom: 1px solid #FFFFFF;
+        }
+
+        #documenter_sidebar, #documenter_sidebar ul a {
+            background-color: #343838;
+            color: #FFFFFF;
+        }
+
+        #documenter_sidebar ul a {
+            -webkit-text-shadow: 1px 1px 0px #494F4F;
+            -moz-text-shadow: 1px 1px 0px #494F4F;
+            text-shadow: 1px 1px 0px #494F4F;
+        }
+
+        #documenter_sidebar ul {
+            border-top: 1px solid #212424;
+        }
+
+        #documenter_sidebar ul a {
+            border-top: 1px solid #494F4F;
+            border-bottom: 1px solid #212424;
+            color: #FFFFFF;
+        }
+
+        #documenter_sidebar ul a:hover {
+            background: #333636;
+            color: #00DFFC;
+            border-top: 1px solid #333636;
+        }
+
+        #documenter_sidebar ul a.current {
+            background: #333636;
+            color: #00DFFC;
+            border-top: 1px solid #333636;
+        }
+
+        #documenter_copyright {
+            display: block !important;
+            visibility: visible !important;
+        }
+
+        #documenter_sidebar, #documenter_sidebar ul a {
+            background-color: #2c3e50;
+            color: #FFF;
+        }
+
+        #documenter_sidebar #documenter_logo {
+            padding: 0;
+            margin-top: 43px;
+            margin-left: 57px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="documenter_sidebar">
+    <a href="#documenter_cover" id="documenter_logo"><img src="assets/img/logo.png" alt=""/></a>
+    <ul id="documenter_nav">
+
+        <li><a class="current" href="#documenter_cover">Welcome</a></li>
+        <li><a href="#installtion">Installing Template</a></li>
+        <li><a href="#html_structure">HTML Structure</a></li>
+        <li><a href="#css_files_and_structure">CSS Structure</a></li>
+        <li><a href="#javascript">Javascript Structure</a></li>
+        <li><a href="#tutorial" title="Tutorial">Tutorial</a></li>
+        <li><a href="#sources_and_credits" title="Sources and Credits">Sources and Credits</a></li>
+    </ul>
+    <div id="documenter_copyright">Copyright max-themes 2015<br>
+        made with the <a href="http://rxa.li/documenter">Documenter v2.0</a>
+    </div>
+</div>
+<div id="documenter_content">
+    <section id="documenter_cover">
+        <h1>Aperio</h1>
+
+        <h2>Creative Multi-Purpose Theme</h2>
+
+        <br>
+        <br>
+
+        <h4><strong>Welcome To Aperio Template Documentation.</strong></h4>
+
+        <p>Firstly, a huge thanks for purchasing this theme, your support is truly appreciated!
+            <br>
+            <br>
+            This document covers the installation and use of this theme and often reveals answers to common problems and
+            issues - read this document thoroughly if you are experiencing any difficulties. If you have any questions
+            that are beyond the scope of this document, feel free to pose them in the dedicated <a
+                    href="http://themeforest.net/user/max-themes/" target="_blank">support section.</a></p>
+
+
+        <h4><strong>Template Features</strong></br></h4>
+
+        <ul class="list">
+            <li>8 Beautiful Demos</li>
+            <li>More than 70 Html Pages</li>
+            <li>Massive Portfolio layouts</li>
+            <li>Tons of shortcodes</li>
+            <li>Google map</li>
+            <li>Clean &amp; Simple Design</li>
+            <li>Advance Framework</li>
+            <li>HTML5 &amp; CSS3</li>
+            <li>Fully Responsive Design</li>
+            <li>Mutipurpose Concept</li>
+            <li>Working Contact Form</li>
+            <li>All files are well commented</li>
+            <li>Crossbrowser Compatible with IE9+, Firefox, Safari, Opera, Chrome</li>
+            <li>Extensive Documentation</li>
+        </ul>
+
+        <p>Go ahead to know more.</p>
+    </section>
+
+
+    <section id="installtion">
+        <div class="page-header"><h3>Installing Template</h3>
+            <hr class="notop">
+        </div>
+
+        <p>After unzip the download pack, you'll found a <strong>Template Folder</strong> with all the files.
+            <br>
+            <br>
+            You can view this Template in any browser, you can display or edit the Template without an internet
+            connection.
+            <br>
+            <br>
+            The two sections that will not work is the <strong>Google map</strong> Section which contains external link
+            to get the map source.
+            <br>
+            <br>
+            and <strong>Contact form</strong> which uses PHP, so will work only online.
+            <br>
+            <br>
+            Now open your FTP Client (like Filezilla) or directly through cpanel, upload the content of the Template on
+            your server root.
+            <br>
+            <br>
+            Once the files are done uploading go to www.yourdomainname.com/index.html
+            <br>
+            <br>
+            Please follow the <a href="#tutorial">tutorial</a> to have a simple installation of the theme.
+        </p>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </section>
+
+    <section id="html_structure">
+        <div class="page-header"><h3>HTML Structure</h3>
+            <hr class="notop">
+        </div>
+
+        <h4><strong>HTML Structure</strong></h4>
+
+        <p>This Template has a Responsive layout and is based on our own framework.
+            <br>
+            <br>
+            The default grid system utilizes 12 columns, making for a 1170px wide container without responsive features
+            enabled. With the responsive CSS file added, the grid adapts to be 724px and 1170px wide depending on your
+            viewport. Below 767px viewports, the columns become fluid and stack vertically.</p>
+
+        <h4><strong>Basic Grid HTML</strong></h4>
+
+        <p>The most importat class to make different grid system is the columns_ class...so if u want a 3 column boxes,
+            in the parent div u must write this class columns_3 and then add the 3 boxes a clas of span...</p>
+
+        <p>For a simple two column layout, create a .columns_2 and add the following class, .span to each div.
+            <br>
+            <br>
+            Given this example, we have .vc_col-sm-4 .vc_col-sm-4 and anothoer ,vc_col-sm-4, making for 12 total columns
+            and a complete row and 3 columns.
+
+<pre name="code" class="html">
+<div class="columns_3 ">
+    <div class="span">...</div>
+    <div class="span">...</div>
+    <div class="span">...</div>
+</div>
+</pre>
+        <br>
+        <br>
+
+        if u want 4 columns u need to specify like our example here:
+
+<pre name="code" class="html">
+<div class="columns_4">
+    <div class="span">...</div>
+    <div class="span">...</div>
+    <div class="span">...</div>
+    <div class="span">...</div>
+</div>
+</pre>
+        <br>
+        <br>
+
+
+    </section>
+    <section id="css_files_and_structure">
+        <div class="page-header"><h3>CSS Structure</h3>
+            <hr class="notop">
+        </div>
+
+        <p>These are the css files that are loaded into templates in Head Section.</p>
+
+<pre name="code" class="html">
+<!-- CSS -->
+
+	<link rel='stylesheet' href='revslider/rs-plugin/css/settings.css' type='text/css' media='all'/>
+	<link rel='stylesheet' href='css/instag-slider.css' type='text/css' media='all'/>
+	<link rel='stylesheet' href='css/style.css' type='text/css' media='all'/>
+	<link rel='stylesheet' href='css/layout.css' type='text/css' media='all'/>
+	<link rel='stylesheet' href='css/main.css' type='text/css' media='all'/>
+	<link rel='stylesheet' href='css/shortcodes.css' type='text/css' media='all'/>
+	<link rel='stylesheet' href='css/mediaelementplayer.min.css' type='text/css' media='all'/>
+	<link rel='stylesheet' href='css/woocommerce.css' type='text/css' media='all'/>
+	<link rel='stylesheet' href='css/prettyPhoto.css' type='text/css' media='all'/>
+	<link rel='stylesheet' href='css/responsive.css' type='text/css' media='all'/>
+	<link rel='stylesheet' href='css/js_composer.css' type='text/css' media='all'/>
+	<link rel='stylesheet' href='css/default.css' type='text/css' media='screen'/>
+	<link rel='stylesheet' href='css/fontawesome.css' type='text/css' media='screen'/>
+	<link rel='stylesheet' href='css/font-awesome.css' type='text/css' media='screen'/>
+</pre>
+
+        <br>
+
+        <h4><strong>Google Web Fonts</strong></h4>
+
+        <p>By default, the template loads raleway font from Google Web Font Services, you can change the font with the
+            one that suits you best.</p>
+<pre name="code" class="html">
+<!-- Custom Google Web Font -->	
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet'
+          type='text/css'>
+</pre>
+
+
+    </section>
+    <section id="javascript">
+        <div class="page-header"><h3>Javascript</h3>
+            <hr class="notop">
+        </div>
+
+        <p>These are the JS files that are loaded into templates in end of the Body Section and some of them like
+            modernizr in the head of the them.</p>
+
+        <p>The js files are also the same in all the demos, and the Template has loaded all the js scripts in all pages,
+            so u can use whatever u want from the template, wherever u want.</p>
+
+<pre name="code" class="html">
+<!-- JavaScript -->
+	<script type='text/javascript' src='js/jquery/jquery.js'></script>
+	<script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
+	<script type='text/javascript' src='revslider/rs-plugin/js/jquery.themepunch.tools.min.js'></script>
+	<script type='text/javascript' src='revslider/rs-plugin/js/jquery.themepunch.revolution.min.js'></script>
+	<script type='text/javascript' src='js/jquery.flexslider-min.js'></script>
+	<script type='text/javascript' src='js/frontend/add-to-cart.min.js'></script>
+	<script type='text/javascript' src='js/jquery-blockui/jquery.blockUI.min.js'></script>
+	<script type='text/javascript' src='js/frontend/woocommerce.min.js'></script>
+	<script type='text/javascript' src='js/jquery-cookie/jquery.cookie.min.js'></script>
+	<script type='text/javascript' src='js/frontend/cart-fragments.min.js'></script>
+	<script type='text/javascript' src='js/brad-love.js'></script>
+	<script type='text/javascript' src='js/modernizr.js'></script>
+	<script type='text/javascript' src='js/fitvids.min.js'></script>
+	<script type='text/javascript' src='js/prettyPhoto.js'></script>
+	<script type='text/javascript' src='js/plugins.js'></script>
+	<script type='text/javascript' src='js/skrollr.js'></script>
+	<script type='text/javascript' src='js/imagesloaded.js'></script>
+	<script type='text/javascript' src='js/jquery.scrollTo.min.js'></script>
+	<script type='text/javascript' src='js/waypoints.min.js'></script>
+	<script type='text/javascript' src='js/isotope.pkgd.min.js'></script>
+	<script type='text/javascript' src='js/bxslider.min.js'></script>
+	<script type='text/javascript' src='js/caroufred.js'></script>
+	<script type='text/javascript' src='js/main.min.js'></script>
+	<script type='text/javascript' src='js/contact-form.js'></script>
+<!-- Customized Scripts -->
+</pre>
+
+    </section>
+    <section id="tutorial">
+        <div class="page-header"><h3>Tutorial</h3>
+            <hr class="notop">
+        </div>
+        <p>Please follow the first steps of the tutorial, to have it easier to install it on your own.</p>
+
+        <p>The Template has 18 different demos, but most of them has some features same but with different style</p>
+
+        <h4 class="sub-head">Header</h4>
+
+        <p>
+            Some of our headers in demo are sticky,and some of them are not sticky...u can remove, or add a sticky
+            header bu just addin this class "second-nav" into the div id="header" ...ehre u see this:
+        </p>
+	
+<pre name="code" class="html">
+	<div id="header" class="header-v1 second-nav" data-height="110" data-shrinked-height="65" data-auto-offset="1"
+         data-offset="0" data-second-nav-offset="0">
+</pre>
+
+        <br>
+
+        <p>We have included different header styles, u have the headers into seperate html pages..so if uw ant a
+            transparent header grab the header from this page "header-solid.html" and others as well..if u have any
+            problem with choicing our headers..we can allways help u :D</p>
+
+
+        <h4 class="sub-head">Navmenu</h4>
+        You will find that this theme has 2 navigation menu's,thats because one of them is only for mobile version.
+        <p>Soo, everything thats sits inside this div "mobile_navigation" is only for mobile versions... </p>
+
+        <p>and everything inside this nav id="main_navigation"is for the desktop browsers</p>
+        <br>
+
+
+
+<pre name="code" class="html">
+   
+	<section id="main_navigation" class="header-nav shrinking-nav">
+        <div class="container">
+            <div id="main_navigation_container" class="row-fluid">
+                <div class="row-fluid">
+                    <!-- logo -->
+                    <div class="logo-container">
+                        <a id="logo" href="index.html">
+                            <img src="images/logo.png" class="default-logo" alt="Aperio">
+                            <img src="images/logowhite.png" class="white-logo" alt="Aperio">
+                        </a>
+                    </div>
+                    <!-- Tooggle Menu will displace on mobile devices -->
+                    <div id="mobile-menu-container">
+                        <a href="#" class="carticon-mobile"><i class="fa-shopping-cart"></i></a>
+                        <a class="toggle-menu" href="#"><i class="fa-navicon"></i></a>
+                    </div>
+                    <nav class="nav-container">
+                        <ul id="main_menu" class="main_menu">
+                            <!-- Main Navigation Menu -->
+                            <li class="menu-item current-menu-ancestor current-menu-parent menu-item-has-children"><a
+                                    href="#">Home</a>
+                                <ul class="sub-menu ">
+                                    <li class="menu-item current-menu-item current_page_item"><a href="index.html">Homepage
+                                        Layout 1</a></li>
+                                    <li class="menu-item"><a href="homepage-layout-1.html">Homepage Layout 2</a></li>
+                                    <li class="menu-item"><a href="homepage-layout-3.html">Homepage Layout 3</a></li>
+                                    <li class="menu-item"><a href="homepage-layout-4.html">Homepage layout 4</a></li>
+                                    <li class="menu-item"><a href="homepage-layout-5-3.html">Homepage Layout 5</a></li>
+                                    <li class="menu-item"><a href="homepage-layout-6.html">Homepage Layout 6</a></li>
+                                    <li class="menu-item"><a href="homepage-blog.html">Homepage Blog</a></li>
+                                    <li class="menu-item"><a href="homepage-blog-grid.html">Homepage Blog Grid</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href="#">Pages</a>
+                                <ul class="sub-menu ">
+                                    <li class="menu-item"><a href="about-us-1.html">About Us 1</a></li>
+                                    <li class="menu-item"><a href="about-us-2.html">About Us 2</a></li>
+                                    <li class="menu-item"><a href="about-me.html">About Me</a></li>
+                                    <li class="menu-item"><a href="services-2.html">Services</a></li>
+                                    <li class="menu-item"><a href="our-process.html">Our Process</a></li>
+                                    <li class="menu-item"><a href="parallax-page.html">Parallax Page</a></li>
+                                    <li class="menu-item"><a href="contact-us-1.html">Contact Us 1</a></li>
+                                    <li class="menu-item"><a href="contact-us-2.html">Contact Us 2</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href="#">Features</a>
+                                <ul class="sub-menu brad-mega-menu row-fluid columns-4">
+                                    <li class="menu-item menu-item-has-children span">
+                                        <h4 class="brad-megamenu-title">Elements</h4>
+                                        <ul class="sub-menu brad-mega-menu row-fluid columns-4">
+                                            <li class="menu-item"><a href="shortcodes.html">Accordions and Toggles</a>
+                                            </li>
+                                            <li class="menu-item"><a href="recent-posts.html">Blog Elements</a></li>
+                                            <li class="menu-item"><a href="content-carousels.html">Box</a></li>
+                                            <li class="menu-item"><a href="buttons-and-icons.html">Buttons</a></li>
+                                            <li class="menu-item"><a href="full-width-sections.html">Clients</a></li>
+                                            <li class="menu-item"><a href="contact-form.html">Contact Form</a></li>
+                                            <li class="menu-item"><a href="charts-progress-bars.html">Counters , Charts
+                                                &#038; Skills</a></li>
+                                            <li class="menu-item"><a href="dropcap-highlighted-tooltips.html">Dropcap ,
+                                                Highlighted &#038; Tooltips</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children span">
+                                        <h4 class="brad-megamenu-title">Elements 2</h4>
+                                        <ul class="sub-menu brad-mega-menu row-fluid columns-4">
+                                            <li class="menu-item"><a href="feature-boxes.html">Feature Boxes</a></li>
+                                            <li class="menu-item"><a href="full-width-sections-2.html">Full Width
+                                                Sections</a></li>
+                                            <li class="menu-item"><a href="gallery.html">Gallery</a></li>
+                                            <li class="menu-item"><a href="google-maps.html">Google Maps</a></li>
+                                            <li class="menu-item"><a href="images-videos.html">Images &#038; Videos</a>
+                                            </li>
+                                            <li class="menu-item"><a href="message-box.html">Message Box</a></li>
+                                            <li class="menu-item"><a href="pricing-table.html">Pricing Table</a></li>
+                                            <li class="menu-item"><a href="portfolio-carousels.html">Portfolio
+                                                Carousels</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children span">
+                                        <h4 class="brad-megamenu-title">Elements 3</h4>
+                                        <ul class="sub-menu brad-mega-menu row-fluid columns-4">
+                                            <li class="menu-item"><a href="quotes.html">Quotes</a></li>
+                                            <li class="menu-item"><a href="separators.html">Separators</a></li>
+                                            <li class="menu-item"><a href="services-box.html">Services Box</a></li>
+                                            <li class="menu-item"><a href="tabs.html">Tabs and Tour</a></li>
+                                            <li class="menu-item"><a href="team-member.html">Team Member</a></li>
+                                            <li class="menu-item"><a href="teaser-box.html">Teaser Box</a></li>
+                                            <li class="menu-item"><a href="testimonials.html">Testimonials</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children span">
+                                        <h4 class="brad-megamenu-title">Headers &#038; Sliders</h4>
+                                        <ul class="sub-menu brad-mega-menu row-fluid columns-4">
+                                            <li class="menu-item"><a href="header-solid.html">Header Transparent</a>
+                                            </li>
+                                            <li class="menu-item"><a href="semi-transparent-header.html">Semi-Transparent
+                                                Header</a></li>
+                                            <li class="menu-item"><a href="header-logo-on-top-2.html">Header Logo on
+                                                Top</a></li>
+                                            <li class="menu-item"><a href="fixed-header-logo-on-top.html">Fixed Header
+                                                Logo on Top</a></li>
+                                            <li class="menu-item"><a href="fixed-header.html">Header with Logo in
+                                                Center</a></li>
+                                            <li class="menu-item"><a href="header-solid-2.html">Solid Header With logo
+                                                in center</a></li>
+                                            <li class="menu-item"><a href="fullscreen-bradslider.html">Fullscreen
+                                                Bradslider</a></li>
+                                            <li class="menu-item"><a href="bradslider-with-solid.html">Bradslider with
+                                                Solid Header</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href="#">Blog</a>
+                                <ul class="sub-menu ">
+                                    <li class="menu-item"><a href="blog-grid.html">Blog Grid</a></li>
+                                    <li class="menu-item"><a href="blog-grid-fullwidth.html">Blog Grid With Sidebar</a>
+                                    </li>
+                                    <li class="menu-item"><a href="blog-masonry.html">Blog Masonry</a></li>
+                                    <li class="menu-item"><a href="blog-masonry-2-columns-2.html">Blog Masonry with
+                                        Sidebar</a></li>
+                                    <li class="menu-item"><a href="blog-standard.html">Blog Standard</a></li>
+                                    <li class="menu-item"><a href="blog-standard-alternate.html">Blog Standard
+                                        Alternate</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href="#">Portfolio</a>
+                                <ul class="sub-menu brad-mega-menu row-fluid columns-4">
+                                    <li class="menu-item menu-item-has-children span">
+                                        <h4 class="brad-megamenu-title">Portfolio Style 1</h4>
+                                        <ul class="sub-menu brad-mega-menu row-fluid columns-4">
+                                            <li class="menu-item"><a href="portfolio-grid-2-columns.html">Portfolio Grid
+                                                2 Columns</a></li>
+                                            <li class="menu-item"><a href="portfolio-three-columns.html">Portfolio Grid
+                                                3 Columns</a></li>
+                                            <li class="menu-item"><a href="portfolio-three-columns-2.html">Portfolio
+                                                Grid 4 Columns</a></li>
+                                            <li class="menu-item"><a href="portfolio-masonry.html">Portfolio Masonry 2
+                                                Columns</a></li>
+                                            <li class="menu-item"><a href="portfolio-three-columns-3.html">Portfolio
+                                                Masonry 3 Columns</a></li>
+                                            <li class="menu-item"><a href="portfolio-four-columns.html">Portfolio
+                                                Masonry 4 Columns</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children span">
+                                        <h4 class="brad-megamenu-title">Portfolio Style 2</h4>
+                                        <ul class="sub-menu brad-mega-menu row-fluid columns-4">
+                                            <li class="menu-item"><a
+                                                    href="portfolio-style-2/portfolio-grid-2-columns.html">Portfolio
+                                                Grid 2 Columns</a></li>
+                                            <li class="menu-item"><a
+                                                    href="portfolio-style-2/portfolio-grid-3-columns.html">Portfolio
+                                                Grid 3 Columns</a></li>
+                                            <li class="menu-item"><a
+                                                    href="portfolio-style-2/portfolio-grid-4-columns.html">Portfolio
+                                                Grid 4 Columns</a></li>
+                                            <li class="menu-item"><a
+                                                    href="portfolio-style-2/portfolio-masonry-2-columns.html">Portfolio
+                                                Masonry 2 Columns</a></li>
+                                            <li class="menu-item"><a
+                                                    href="portfolio-style-2/portfolio-masonry-3-columns.html">Portfolio
+                                                Masonry 3 Columns</a></li>
+                                            <li class="menu-item"><a
+                                                    href="portfolio-style-2/portfolio-masonry-4-columns.html">Portfolio
+                                                Masonry 4 Columns</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children span">
+                                        <h4 class="brad-megamenu-title">Portfolio Alternate</h4>
+                                        <ul class="sub-menu brad-mega-menu row-fluid columns-4">
+                                            <li class="menu-item"><a href="fullwidth-portfolio.html">Fullwidth
+                                                Portfolio</a></li>
+                                            <li class="menu-item"><a href="fullwidth-portfolio-with-info.html">Fullwidth
+                                                Portfolio Alt.</a></li>
+                                            <li class="menu-item"><a href="portfolio-fullwidth-masonry.html">Portfolio
+                                                Fullwidth Masonry</a></li>
+                                            <li class="menu-item"><a href="portfolio-with-animation.html">Portfolio With
+                                                Animation</a></li>
+                                            <li class="menu-item"><a href="portfolio-with-loadmore-btn.html">Portfolio
+                                                With Loadmore Btn.</a></li>
+                                            <li class="menu-item"><a href="portfolio-without-gap.html">Portfolio Without
+                                                Gap</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children span">
+                                        <h4 class="brad-megamenu-title">Single Project</h4>
+                                        <ul class="sub-menu brad-mega-menu row-fluid columns-4">
+                                            <li class="menu-item"><a href="business-photogrpagy.html">Fullwidth
+                                                Project</a></li>
+                                            <li class="menu-item"><a href="brand-development.html">2/3 Width Project</a>
+                                            </li>
+                                            <li class="menu-item"><a href="work-single-slider.html">Gallery Slider</a>
+                                            </li>
+                                            <li class="menu-item"><a href="pellentesque-habitant-morbi.html">Project
+                                                Video</a></li>
+                                            <li class="menu-item"><a href="sed-imperdiet-fringilla-sem-eget.html">Page
+                                                Builder 1</a></li>
+                                            <li class="menu-item"><a href="nam-vitae-sem-eget.html">Page Builder 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href="#">Shop</a>
+                                <ul class="sub-menu ">
+                                    <li class="menu-item"><a href="shop.html">Shop</a></li>
+                                    <li class="menu-item"><a href="shop-fullwidth.html">Shop Fullwidth</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="contact-us-2.html">Contact Us</a></li>
+                            <li class="cart-container">
+                                <!-- Cart Icons -->
+                                <a class="cart-icon-wrapper" href="#"><span class="cart-icon"><i
+                                        class="fa-shopping-cart"></i></span><span class="count">0</span></a>
+                            </li>
+                            <li id="header-search-button"><a href="#" class="search-button"><i
+                                    class="fa-search"></i></a>
+
+                                <div id="header-search-panel">
+                                    <div>
+                                        <form action="#" id="header-search-form" method="get">
+                                            <input type="text" id="header-search" name="s" value=""
+                                                   placeholder="Hit Enter to Search" autocomplete="off"/>
+                                            <!-- Create a fake search button -->
+                                            <input type="submit" name="submit" value="submit"/>
+                                        </form>
+                                        <span class="close-icon"><i class="fa fa-search"></i></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+</pre>
+
+        This is the main navigation.
+
+
+        <br>
+        <hr>
+
+        <h4 class="sub-head">Slider</h4>
+        We have used the slider Revolutin in our theme
+<pre name="code" class="html">
+
+    <!-- Rev Slider Start -->
+    <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
+         style="margin:0px auto;background-color:#E9E9E9;padding:0px;margin-top:0px;margin-bottom:0px;max-height:600px;">
+        <!-- START REVOLUTION SLIDER 4.6.5 fullwidth mode -->
+        <div id="rev_slider_1_1" class="rev_slider fullwidthabanner"
+             style="display:none;max-height:600px;height:600px;">
+            <ul>
+                <!-- SLIDE  -->
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+                    <!-- MAIN IMAGE -->
+                    <img src="upload/shutterstock_178724276.jpg" alt="shutterstock_178724276"
+                         data-bgposition="right top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption brad-heading sfb tp-resizeme" data-x="25" data-y="center" data-voffset="-70"
+                         data-speed="500" data-start="500" data-easing="Power3.easeInOut" data-splitin="none"
+                         data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300"
+                         style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+                        It is so easy and Fun to
+                        <br/> create Stunning Websites
+                    </div>
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption brad-sub-heading sfb tp-resizeme" data-x="25" data-y="center"
+                         data-voffset="20" data-speed="500" data-start="1000" data-easing="Power3.easeInOut"
+                         data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+                         data-endspeed="300"
+                         style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+                        Clean , Creative and Powerful Multipurpose Theme For Wordpress
+                    </div>
+                    <!-- LAYER NR. 3 -->
+                    <div class="tp-caption brad-buttons sfb tp-resizeme" data-x="18" data-y="center" data-voffset="105"
+                         data-speed="500" data-start="1500" data-easing="Power3.easeInOut" data-splitin="none"
+                         data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300"
+                         style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">
+                        <a href="#" class="button button_large button_green">Buy This Now</a><a href="#"
+                                                                                                class="button button_large button_alternate">Read
+                        More</a>
+                    </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+                    <!-- MAIN IMAGE -->
+                    <img src="upload/shutterstock_221639593.jpg" alt="shutterstock_221639593"
+                         data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption brad-heading-white sfb tp-resizeme" data-x="25" data-y="center"
+                         data-voffset="-75" data-speed="500" data-start="500" data-easing="Power3.easeInOut"
+                         data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+                         data-endspeed="300"
+                         style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+                        It is so easy and Fun to
+                        <br/> create Stunning Websites
+                    </div>
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption brad-sub-heading-white sfb tp-resizeme" data-x="25" data-y="center"
+                         data-voffset="10" data-speed="500" data-start="1000" data-easing="Power3.easeInOut"
+                         data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+                         data-endspeed="300"
+                         style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+                        Clean , Creative and Powerful Multipurpose Theme For Wordpress
+                    </div>
+                    <!-- LAYER NR. 3 -->
+                    <div class="tp-caption brad-buttons sfb tp-resizeme" data-x="18" data-y="center" data-voffset="98"
+                         data-speed="500" data-start="1500" data-easing="Power3.easeInOut" data-splitin="none"
+                         data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300"
+                         style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">
+                        <a href="#" class="button button_large button_green">Buy This Now</a><a href="#"
+                                                                                                class="button button_large button_alternatewhite">Read
+                        More</a>
+                    </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+                    <!-- MAIN IMAGE -->
+                    <img src="upload/shutterstock_202832599.jpg" alt="shutterstock_202832599"
+                         data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption brad-heading-right sfb tp-resizeme" data-x="right" data-hoffset="-25"
+                         data-y="center" data-voffset="-85" data-speed="500" data-start="500"
+                         data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1"
+                         data-endelementdelay="0.1" data-endspeed="300"
+                         style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+                        It is so easy and Fun to
+                        <br/> create Stunning Websites
+                    </div>
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption brad-sub-heading sfb tp-resizeme" data-x="right" data-hoffset="-25"
+                         data-y="center" data-voffset="0" data-speed="500" data-start="1000"
+                         data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1"
+                         data-endelementdelay="0.1" data-endspeed="300"
+                         style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+                        Clean , Creative and Powerful Multipurpose Theme For Wordpress
+                    </div>
+                    <!-- LAYER NR. 3 -->
+                    <div class="tp-caption brad-buttons sfb tp-resizeme" data-x="right" data-hoffset="-18"
+                         data-y="center" data-voffset="85" data-speed="500" data-start="1500"
+                         data-easing="Power2.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1"
+                         data-endelementdelay="0.1" data-endspeed="300"
+                         style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">
+                        <a href="#" class="button button_large button_green">Buy This Now</a><a href="#"
+                                                                                                class="button button_large button_alternate">Read
+                        More</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;">
+            </div>
+        </div>
+    </div>
+    <!-- END REVOLUTION SLIDER -->
+    <!-- Rev Slider End -->
+
+</pre>
+
+        The revolution slider will require the activation code that is in all pages that have this slider... in the end
+        of page...
+
+        <br>
+        <hr>
+
+
+        <hr>
+
+        <h4 class="sub-head">google Maps</h4>
+
+        Using any of our Google map style is very easy. Here is the example of google map
+
+<pre name="code" class="html">
+
+	<div id="map"></div>
+
+</pre>
+
+
+        To Change the google maps latitude and longtitude u need to go to contact-form.js and u will see the code below.
+
+<pre name="code" class="html">
+     var myMarkers = {
+        "markers": [
+            {
+                "latitude": "40.7127",       // latitude
+                "longitude":"-74.0059",       // longitude
+                "icon": "images/map_pin_1.png"  // Pin icon
+            }
+             
+
+            // Add As Plenty As u want
+            , {
+                "latitude": "40.712785",
+                "longitude":"-73.969708",
+                "icon": "images/map_pin_1.png"
+            }
+            , {
+                "latitude": "40.722785",
+                "longitude":"-73.999708",
+                "icon": "images/map_pin_1.png"
+            }
+            
+            
+        ]
+    };
+
+    try {
+        $("#google_map").mapmarker({
+            zoom : 14,                          // Zoom
+            center: "40.7127,-74.0059",        // Center of map
+            type: "ROADMAP",                    // Map Type
+            controls: "HORIZONTAL_BAR",         // Controls style
+            dragging:1,                         // Allow dragging?
+            mousewheel:0,                       // Allow zooming with mousewheel
+            markers: myMarkers,
+            styling: 0,                         // Bool - do you want to style the map?
+            featureType:"all",
+            visibility: "on",
+            elementType:"geometry",
+            hue:"#00AAFF",
+            saturation:-100,
+            lightness:0,
+            gamma:1,
+            navigation_control:0
+            /*
+            To play with the map colors and styles you can try this tool right here http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
+            */
+        });
+
+    } catch(err) {
+    }
+
+</pre>
+        <p>so here we added 3 pins for the map... and then after pins is the map latitude and longtitude..</p>
+
+        <p> Also u will need these 2 jquery scripts to make it work</p>
+<pre name="code" class="html">
+
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/gmap3.min.js"></script>
+
+</pre>
+        <br>
+
+
+        <h4 class="sub-head">Contact Form</h4>
+
+        <p><strong>Open "contact.php" from the folder "PHP" in theme file.</strong></p>
+
+        <ol>
+            <li>Find "<strong>#Your e-mail address</strong>" and replace it with the email id, where you want to receive
+                the mail.
+            </li>
+        </ol>
+
+        <br>
+        <hr>
+
+
+        <h4 class="sub-head">Icons</h4>
+
+        U can use icons from fontAwesome, here's the <a href="http://fortawesome.github.io/Font-Awesome/icons/">link</a>
+        of the icon map
+
+
+        </br>
+        <hr>
+
+
+        <h2 style="margin-bottom:30px;">Thats it. You are done. Now your website is ready to launch. <br>
+            This is a very small tutorial for the index.html, but it will help u with other demos too, if u have any
+            trouble setting up the theme, we will be happy to assist you.
+        </h2>
+        <hr>
+
+        <section id="sources_and_credits">
+            <div class="page-header"><h3>Sources and Credits</h3>
+                <hr class="notop">
+            </div>
+            <p>We have used the following plugins, fonts & images. All fonts, images, icons used in this template are
+                free for commercial use.</p>
+
+            <strong>Fonts</strong>
+            <ul>
+                <li><a href="https://www.google.com/fonts">Raleway</a> from google webfont.</li>
+            </ul>
+
+            <br>
+
+            <strong>jQuery Plugins</strong>
+            <ul>
+                <li>Flexslider plugin by <a href="https://www.woothemes.com/flexslider/">woothemes</a></li>
+                <li>Owlscroll carousel plugin by <a href="http://owlgraphic.com/owlcarousel/?">owlgraphic</a></li>
+                <li>Lightbox by <a href="http://dimsemenov.com/plugins/magnific-popup/">Smashing</a></li>
+                <li>Modernizr by <a href="http://modernizr.com/">Modernizr</a></li>
+
+            </ul>
+
+            <br>
+
+            <strong>Images</strong>
+            <ul>
+                <li>Images used from <a href="#">Source name</a></li>
+            </ul>
+
+            Images in live preview are not included to the template.
+
+            </ul>
+
+            <br>
+
+        </section>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p>Once again, thank you so much for purchasing this theme.<br>As I said at the beginning, We'd be glad to help
+            you if you have any questions relating to this theme. We I'll do our best to assist.</p>
+        If u have question u can ask us <a href="http://themeforest.net/user/max-themes">here.</a>
+        Thanks
+        <h4>max-themes</h4>
+
+
+</div>
+
+
+<script language="javascript" src="assets/js/shCore.js"></script>
+<script language="javascript" src="assets/js/shBrushCss.js"></script>
+<script language="javascript" src="assets/js/shBrushXml.js"></script>
+<script language="javascript" src="assets/js/shBrushJScript.js"></script>
+
+<style type="text/css" media="screen">
+    p, table, hr, .box {
+        padding-bottom: 15px;
+    }
+
+    .box p {
+        margin-bottom: 10px;
+    }
+
+    pre, code {
+        font-size: 14px;
+        margin: 1.5em 0;
+        white-space: pre;
+    }
+</style>
+
+
+</body>
+</html>
