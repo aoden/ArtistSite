@@ -1,6 +1,5 @@
 import hashlib
 from flask import Flask
-from flask.ext.restful import abort
 from flask.ext.restful.reqparse import RequestParser
 from flask_restful import Resource, Api
 from service.UserService import UserService

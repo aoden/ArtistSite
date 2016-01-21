@@ -8,8 +8,8 @@
 
     <title>Aperio</title>
     <!--[if lte IE 8]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
     <link rel='stylesheet' href='revslider/rs-plugin/css/settings.css' type='text/css' media='all'/>
     <link rel='stylesheet' href='css/instag-slider.css' type='text/css' media='all'/>
@@ -29,14 +29,16 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet'
           type='text/css'>
 
-    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="http://aperio.bradweb.net/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen">
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css"
+          href="http://aperio.bradweb.net/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen">
     <![endif]-->
     <!--[if IE]>
-	<link rel="stylesheet" href="http://aperio.bradweb.net/wp-content/themes/Aperio/css/ie.css">
-<![endif]-->
+    <link rel="stylesheet" href="http://aperio.bradweb.net/wp-content/themes/Aperio/css/ie.css">
+    <![endif]-->
     <!--[if lte IE 8]>
-	<script type="text/javascript" src="http://aperio.bradweb.net/wp-content/themes/Aperio/js/respond.min.js"></script>
-<![endif]-->
+    <script type="text/javascript" src="http://aperio.bradweb.net/wp-content/themes/Aperio/js/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
@@ -85,7 +87,7 @@
                         <div class="inner-content content-box textnone"
                              style="padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;">
                             <h3 class="title textcenter style1 bw-defaultpx dh-defaultpx divider-primary bc-default dw-default color-default"
-                                style="margin-bottom:60px"><span>Please login</span>
+                                style="margin-bottom:60px"><span>Upload Your Image</span>
                             </h3>
 
                             <div class="row-fluid element-padding-default element-vpadding-default "
@@ -93,38 +95,10 @@
                                 <div class="section-column span12" style="">
                                     <div class="inner-content content-box textnone"
                                          style="padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;">
-                                        <form id="login-form" class="contact-form field-icons-no">
-                                            <div class="row-fluid center-block">
-                                                <div class="span8 vc_col-md-offset-2">
-                                                    <div class="control-wrap">
-                                                        <input name="email" id="email" type="text" maxlength="100"
-                                                               class="name required" placeholder="Your Email"
-                                                               ng-model="email"/>
-                                                    </div>
-                                                </div>
-                                                <div class="span8 vc_col-md-offset-2">
-                                                    <div class="control-wrap">
-                                                        <input style="width: 100%" name="password" id="password"
-                                                               type="password"
-                                                               class="name required" placeholder="Your Password"
-                                                               ng-model="password"/>
-                                                    </div>
-                                                    <div id="msg" class="message">{{ error_message }}</div>
-                                                </div>
-                                                <div class="span6 vc_col-md-offset-2">
-                                                    <div class="control-wrap">
-                                                        <label class="vc_label"><a href="reset_pwd.html">Forgot your
-                                                            password?</a></label>
-                                                    </div>
-                                                </div>
-                                                <div class="span6 vc_col-xs-offset-5">
-                                                    <div class="control-wrap">
-                                                        <button type="button" id="btn_login"
-                                                                class="button button_default"
-                                                                value="" ng-click="login()">Login
-                                                        </button>
-                                                    </div>
-                                                </div>
+                                        <form id="upload-form" class="contact-form field-icons-no">
+                                            <!-- Upload content go from here-->
+                                            <div class="span8 vc_col-md-offset-2">
+
                                             </div>
                                         </form>
                                     </div>
