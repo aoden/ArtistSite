@@ -1,5 +1,5 @@
 'use strict';
-var myApp = angular.module('myApp');
+var myApp = angular.module('myApp', []);
 
 
 myApp.controller("signupCtrl", ['$scope', '$http', function ($scope, $http) {
@@ -14,7 +14,7 @@ myApp.controller("signupCtrl", ['$scope', '$http', function ($scope, $http) {
             }).then(function (response) {
 
                 location.assign("login");
-            });
+            })
         }
     }]
 );
@@ -28,9 +28,15 @@ myApp.controller("loginCtrl", ['$scope', '$http', function ($scope, $http) {
             url: '/login',
             data: $.param({email: $scope.email, password: $scope.password}),
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-        }).then(function (response) {
+        }).then(function (resp) {
 
-            location.assign("index.html");
+            alert(JSON.stringify(resp))
+            if (resp.data.message == 'error') {
+
+                $scope.error_message = 'Wrong email or password!'
+            } else {
+                location.assign("index.html")
+            }
         });
     }
 }]);
