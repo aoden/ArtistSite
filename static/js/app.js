@@ -30,12 +30,11 @@ myApp.controller("loginCtrl", ['$scope', '$http', function ($scope, $http) {
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         }).then(function (resp) {
 
-            alert(JSON.stringify(resp))
             if (resp.data.message == 'error') {
 
                 $scope.error_message = 'Wrong email or password!'
             } else {
-                location.assign("index.html")
+                location.assign("home.html")
             }
         });
     }
