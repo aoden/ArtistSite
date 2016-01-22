@@ -39,8 +39,14 @@ class Register(Resource):
         parser.add_argument('description', type=str)
 
 
-api.add_resource(Login, '/login')
-api.add_resource(Register, '/signup')
+class Upload(Resource):
+    def post(self):
+        parser = RequestParser()
+        parser.add_argument('file', type=str)
+        parser.add_argument('name', type=str)
+        parser.add_argument('price', type=str)
+        parser.add_argument('description', type=str)
+        parser.add_argument('type', type=str)
 
 if __name__ == '__main__':
     app.run(debug=True)

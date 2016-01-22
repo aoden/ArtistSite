@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    <title>Aperio</title>
+    <title>Upload Page</title>
     <!--[if lte IE 8]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -40,6 +40,35 @@
     <script type="text/javascript" src="http://aperio.bradweb.net/wp-content/themes/Aperio/js/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+        .custom-file-input::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+
+        .custom-file-input::before {
+            content: 'Select some files';
+            display: inline-block;
+            background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 5px 8px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            cursor: pointer;
+            text-shadow: 1px 1px #fff;
+            font-weight: 700;
+            font-size: 10pt;
+        }
+
+        .custom-file-input:hover::before {
+            border-color: black;
+        }
+
+        .custom-file-input:active::before {
+            background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+        }
+    </style>
 </head>
 
 <body id="home" ng-app="myApp"
@@ -55,7 +84,7 @@
                 <div class="row-fluid">
                     <div class="row-fluid">
                         <div class="titlebar-heading">
-                            <h1><span>Shortcodes</span></h1>
+                            <h1><span>Upload</span></h1>
 
                             <div class="hr hr-border-primary double-border border-small">
                                 <span></span>
@@ -63,7 +92,7 @@
                         </div>
                         <div id="breadcrumbs">
                             <span class="breadcrumb-title">You Are Here:</span><span><a
-                                href="index.html">Home</a></span><span class="separator">/</span><span class="current">Shortcodes</span>
+                                href="index.html">Home</a></span><span class="separator">/</span><span class="current">Upload</span>
                         </div>
                     </div>
                 </div>
@@ -90,15 +119,71 @@
                                 style="margin-bottom:60px"><span>Upload Your Image</span>
                             </h3>
 
-                            <div class="row-fluid element-padding-default element-vpadding-default "
-                                 ng-controller="loginCtrl">
+                            <div class="row-fluid element-padding-default element-vpadding-default " ng-app="myApp">
                                 <div class="section-column span12" style="">
                                     <div class="inner-content content-box textnone"
                                          style="padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;">
-                                        <form id="upload-form" class="contact-form field-icons-no">
+                                        <form id="upload-form" class="contact-form field-icons-no"
+                                              ng-controller="uploadController">
                                             <!-- Upload content go from here-->
                                             <div class="span8 vc_col-md-offset-2">
-
+                                                <form id="login-form" class="contact-form field-icons-no">
+                                                    <div class="row-fluid center-block">
+                                                        <div class="span8 vc_col-md-offset-2">
+                                                            <div class="control-wrap">
+                                                                <input class="custom-file-input" name="file" id="file"
+                                                                       type="file"
+                                                                       maxlength="100" placeholder=""
+                                                                       ng-model="file"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="span8 vc_col-md-offset-2">
+                                                            <div class="control-wrap">
+                                                                <select name="type" ng-model="type">
+                                                                    <option value="0">2D</option>
+                                                                    <option value="1">3D</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="span8 vc_col-md-offset-2">
+                                                            <div class="control-wrap">
+                                                                <input style="width: 100%" name="name" id="name"
+                                                                       type="text" placeholder="Name"
+                                                                       ng-model="name"/>
+                                                            </div>
+                                                            <div id="msg" class="message">{{ error_message }}</div>
+                                                        </div>
+                                                        <div class="span8 vc_col-md-offset-2">
+                                                            <div class="control-wrap">
+                                                                <input style="width: 100%" name="name" id="price"
+                                                                       type="text" placeholder="Price"
+                                                                       ng-model="price"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="span8 vc_col-md-offset-2">
+                                                            <div class="control-wrap">
+                                                                <textarea style="width: 100%" name="name"
+                                                                          id="description"
+                                                                          type="text" placeholder="Your Description"
+                                                                          ng-model="description"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <!--<div class="span6 vc_col-md-offset-2">-->
+                                                        <!--<div class="control-wrap">-->
+                                                        <!--<label class="vc_label"><a href="reset_pwd.html">Forgot your-->
+                                                        <!--password?</a></label>-->
+                                                        <!--</div>-->
+                                                        <!--</div>-->
+                                                        <div class="span6 vc_col-xs-offset-5">
+                                                            <div class="control-wrap">
+                                                                <button type="button" id="btn_upload"
+                                                                        class="button button_default"
+                                                                        value="" ng-click="upload()">Upload
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </form>
                                     </div>
@@ -174,6 +259,7 @@
                             </ul>
                         </div>
                     </div>
+
                     <div id="portfolio-widget-3" class="widget widget_meta portfolios span3">
                         <h4>Recent Works</h4>
 
