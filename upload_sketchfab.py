@@ -123,7 +123,7 @@ def poll_processing_status(model_uid):
 ##################################################
 
 # Mandatory parameters
-model_file = "./bob.zip"  # path to your model
+model_file = ""  # path to your model
 
 # Optional parameters
 name = "A Bob model"

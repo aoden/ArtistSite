@@ -1,10 +1,88 @@
 'use strict';
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngCookies']);
 
 
-myApp.controller("uploadController", ['$scope', '$http', function ($scope, $http) {
+myApp.controller('resetController', ['$scope', '$http', '$cookies', function ($scope, $http, $cookies) {
+
+    $scope.reset = function () {
+
+        $http({
+            method: 'POST',
+            url: '/reset',
+            data: $.param({
+                email: $scope.email,
+                token: $scope.api_token
+            }),
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        }).then(function (resp) {
+
+            if (resp.data.message = 'success') {
+
+            } else {
+                location.assign('login.html')
+            }
+        });
+    }
+}]);
+
+
+myApp.controller("signupCtrl", ['$scope', '$http', function ($scope, $http) {
+
+        $scope.signup = function () {
+
+            $http({
+                method: 'POST',
+                url: '/signup',
+                data: $.param({email: $scope.email, password: $scope.password, name: $scope.name}),
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }).then(function (response) {
+
+                location.assign("login");
+            })
+        }
+    }]
+);
+
+myApp.controller("loginCtrl", ['$scope', '$http', '$cookies', function ($scope, $http, $cookies) {
 
     $scope.login = function () {
+
+        $http({
+            method: 'POST',
+            url: '/login',
+            data: $.param({email: $scope.email, password: $scope.password}),
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        }).then(function (resp) {
+
+            if (resp.data.message == 'error') {
+                $scope.error_message = 'Wrong email or password!'
+            } else {
+                $cookies.put('token', resp.data.token)
+                location.assign("home.html")
+            }
+        });
+    }
+}]);
+
+myApp.controller("uploadController", ['$scope', '$http', '$cookies', function ($scope, $http, $cookies) {
+
+    $http({
+        method: 'POST',
+        url: '/token',
+        data: $.param({
+            token: $cookies.get('token'),
+        }),
+        headers: {'Content-Type': 'multipart/form-data'}
+    }).then(function (resp) {
+
+        if (resp.data.message = 'success') {
+
+        } else {
+            location.assign('login.html')
+        }
+    });
+
+    $scope.upload = function () {
 
         $http({
             method: 'POST',
@@ -14,12 +92,13 @@ myApp.controller("uploadController", ['$scope', '$http', function ($scope, $http
                 name: $scope.name,
                 price: $scope.price,
                 description: $scope.description,
-                type: $scope.type
+                type: $scope.type,
+                token: $cookies.get(token)
             }),
             headers: {'Content-Type': 'multipart/form-data'}
-        }).then(function (resp) {
+        }).then(function (res) {
 
-            if (resp.data.message == 'error') {
+            if (res.data.message == 'error') {
 
                 $scope.error_message = 'There is some error, please check again!'
             } else {
@@ -47,7 +126,7 @@ myApp.controller("signupCtrl", ['$scope', '$http', function ($scope, $http) {
     }]
 );
 
-myApp.controller("loginCtrl", ['$scope', '$http', function ($scope, $http) {
+myApp.controller("loginCtrl", ['$scope', '$http', '$cookies', function ($scope, $http, $cookies) {
 
     $scope.login = function () {
 
@@ -59,9 +138,9 @@ myApp.controller("loginCtrl", ['$scope', '$http', function ($scope, $http) {
         }).then(function (resp) {
 
             if (resp.data.message == 'error') {
-
                 $scope.error_message = 'Wrong email or password!'
             } else {
+                $cookies.put('token', resp.data.token)
                 location.assign("home.html")
             }
         });

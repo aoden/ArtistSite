@@ -97,6 +97,15 @@
                                             <div class="row-fluid center-block">
                                                 <div class="span8 vc_col-md-offset-2">
                                                     <div class="control-wrap">
+                                                        <button style="width: 100%;"
+                                                                class="button button_custom button_color_default button_default border-radius-small icon-align-left">
+                                                            <a href="reset_pwd.html">
+                                                                Sign Up </a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="span8 vc_col-md-offset-2">
+                                                    <div class="control-wrap">
                                                         <input name="email" id="email" type="text" maxlength="100"
                                                                class="name required" placeholder="Your Email"
                                                                ng-model="email"/>
@@ -112,7 +121,7 @@
                                                     <div id="msg" class="message">{{ error_message }}</div>
                                                 </div>
                                                 <div class="span6 vc_col-md-offset-2">
-                                                    <div class="control-wrap">
+                                                    <div class="control-wrap" style="float:left;">
                                                         <label class="vc_label"><a href="reset_pwd.html">Forgot your
                                                             password?</a></label>
                                                     </div>
@@ -248,6 +257,7 @@
 <!-- end copyright -->
 
 <script src="js/angular.js"></script>
+<script src="js/angular.cookies.min.js"></script>
 <script type='text/javascript' src='js/jquery/jquery.js'></script>
 <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
 <script type='text/javascript' src='revslider/rs-plugin/js/jquery.themepunch.tools.min.js'></script>
