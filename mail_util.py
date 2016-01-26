@@ -1,7 +1,12 @@
+import os
+
 __author__ = 'khoi'
 
-import smtplib
 
+def send_mail(recipient, subject, body):
+    gmail_user = 'supercat1712@gmail.com'
+    gmail_pwd = os.environ.get('gmail_pwd')
+    send_email(gmail_user, gmail_pwd, recipient, subject, body)
 
 def send_email(user, pwd, recipient, subject, body):
     import smtplib

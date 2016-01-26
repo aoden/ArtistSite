@@ -11,13 +11,13 @@ myApp.controller('resetController', ['$scope', '$http', '$cookies', function ($s
             url: '/reset',
             data: $.param({
                 email: $scope.email,
-                token: $scope.api_token
+                token: $scope.token
             }),
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         }).then(function (resp) {
 
-            if (resp.data.message = 'success') {
-
+            if (resp.data.message = 'error') {
+                $scope.reset_pwd_message = 'There is something wrong, please try again'
             } else {
                 location.assign('login.html')
             }
@@ -67,7 +67,7 @@ myApp.controller("loginCtrl", ['$scope', '$http', '$cookies', function ($scope, 
 myApp.controller("uploadController", ['$scope', '$http', '$cookies', function ($scope, $http, $cookies) {
 
     $http({
-        method: 'POST',
+        method: 'GET',
         url: '/token',
         data: $.param({
             token: $cookies.get('token'),
@@ -84,6 +84,18 @@ myApp.controller("uploadController", ['$scope', '$http', '$cookies', function ($
 
     $scope.upload = function () {
 
+        $http({
+            method: 'get',
+            url: '/token',
+            data: $.param({
+                token: $cookies.get(token)
+            }),
+        }).then(function (res) {
+
+            if (res.data.message == 'error') {
+                location.assign("login.html")
+            }
+        });
         $http({
             method: 'POST',
             url: '/login',

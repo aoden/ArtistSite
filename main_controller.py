@@ -8,6 +8,7 @@ from flask_restful import Resource, Api
 import werkzeug
 
 from dao.base_dao import SALT, hash_sha
+from mail_util import send_mail
 from service.UserService import UserService
 from service.image_service import ImageService
 
@@ -60,23 +61,24 @@ class Upload(Resource):
         args = parser.parse_args()
         if UserService.check_token(args['token']):
             if args['type'] == 0:
-                return {'message', 'success'}
+                return {'message': 'success'}
                 ImageService.save_2d_image(args)
             else:
                 ImageService.save_3d_image(args)
-                return {'message', 'success'}
+                return {'message': 'success'}
 
-        return {'message', 'error'}, 403
+        return {'message': 'error'}, 403
 
 
 class Token(Resource):
+
     def get(self):
         parser = RequestParser()
         parser.add_argument('token', type=str)
         args = parser.parse_args()
-        if UserService.check_token():
-            return {'message', 'success'}
-        return {'message', 'error'}
+        if UserService.check_token(args['token']):
+            return {'message': 'success'}
+        return {'message': 'error'}
 
 
 class ResetPwd(Resource):
@@ -89,6 +91,7 @@ class ResetPwd(Resource):
         salted_string = (pwd + SALT)
         hashed_pwd = hash_sha(salted_string)
         UserService.create_user(args['email'], hashed_pwd, args['token'])
+        send_mail(args['email'], "Account information", "Hi, This is your temporary password for your account: " + pwd)
 
 
 api.add_resource(ResetPwd, '/reset')
