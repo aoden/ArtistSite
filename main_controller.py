@@ -50,6 +50,7 @@ class Register(Resource):
 
 class Upload(Resource):
     def post(self):
+
         parser = RequestParser()
         parser.add_argument('file', type=werkzeug.datastructures.FileStorage)
         parser.add_argument('name', type=str)
@@ -83,15 +84,20 @@ class Token(Resource):
 
 class ResetPwd(Resource):
     def post(self):
-        parser = RequestParser()
-        parser.add_argument('email', type=str)
-        parser.add_argument('token', type=str)
-        args = parser.parse_args()
-        pwd = ''.join(choice(ascii_uppercase) for i in range(8))
-        salted_string = (pwd + SALT)
-        hashed_pwd = hash_sha(salted_string)
-        UserService.create_user(args['email'], hashed_pwd, args['token'])
-        send_mail(args['email'], "Account information", "Hi, This is your temporary password for your account: " + pwd)
+        try:
+            parser = RequestParser()
+            parser.add_argument('email', type=str)
+            parser.add_argument('token', type=str)
+            args = parser.parse_args()
+            pwd = ''.join(choice(ascii_uppercase) for i in range(8))
+            salted_string = (pwd + SALT)
+            hashed_pwd = hash_sha(salted_string)
+            UserService.create_user(args['email'], hashed_pwd, args['token'])
+            send_mail(args['email'], "Account information",
+                      "Hi, This is your temporary password for your account: " + pwd)
+            return {'message': 'ok'}
+        except:
+            return {'message': 'error'}
 
 
 api.add_resource(ResetPwd, '/reset')

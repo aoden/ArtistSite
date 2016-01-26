@@ -16,6 +16,7 @@ myApp.controller('resetController', ['$scope', '$http', '$cookies', function ($s
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         }).then(function (resp) {
 
+
             if (resp.data.message = 'error') {
                 $scope.reset_pwd_message = 'There is something wrong, please try again'
             } else {
@@ -68,14 +69,10 @@ myApp.controller("uploadController", ['$scope', '$http', '$cookies', function ($
 
     $http({
         method: 'GET',
-        url: '/token',
-        data: $.param({
-            token: $cookies.get('token'),
-        }),
-        headers: {'Content-Type': 'multipart/form-data'}
+        url: '/token' + '?token=' + $cookies.get('token'),
     }).then(function (resp) {
 
-        if (resp.data.message = 'success') {
+        if (resp.data.message == 'success') {
 
         } else {
             location.assign('login.html')
@@ -85,29 +82,18 @@ myApp.controller("uploadController", ['$scope', '$http', '$cookies', function ($
     $scope.upload = function () {
 
         $http({
-            method: 'get',
-            url: '/token',
-            data: $.param({
-                token: $cookies.get(token)
-            }),
-        }).then(function (res) {
-
-            if (res.data.message == 'error') {
-                location.assign("login.html")
-            }
-        });
-        $http({
             method: 'POST',
-            url: '/login',
+            url: '/upload',
             data: $.param({
                 file: $scope.file,
                 name: $scope.name,
                 price: $scope.price,
                 description: $scope.description,
                 type: $scope.type,
-                token: $cookies.get(token)
+                token: $cookies.get('token')
             }),
-            headers: {'Content-Type': 'multipart/form-data'}
+            headers: {'Content-Type': 'undefined'},
+            transformRequest: angular.identity,
         }).then(function (res) {
 
             if (res.data.message == 'error') {

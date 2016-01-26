@@ -90,6 +90,8 @@ class UserDao(BaseDao):
                 if result['token'] == token:
                     return True
             return False
+        except:
+            return False
         finally:
             connection.close()
 
